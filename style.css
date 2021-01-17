@@ -1,0 +1,182 @@
+:root {
+    --clr-dark-magenta: hsl(300, 43%, 22%);
+    --clr-soft-pink: hsl(333, 80%, 67%);
+    --clr-dark-grayish-magenta: hsl(303, 10%, 53%);
+    --clr-light-grayish-magenta: hsl(300, 24%, 96%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+    background: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+    background-size: 41vw, 82vw;
+}
+
+.social-container {
+    max-width: 1044px;
+    margin: 120px auto 0;
+}
+.social-container .social-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 65px;
+}
+.social-block .social-desc {
+    flex-basis: 40%;
+}
+.social-desc .title {
+    font-size: 3em;
+    color: var(--clr-dark-magenta);
+    line-height: 1;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+.social-desc p {
+    color: var(--clr-dark-grayish-magenta);
+    line-height: 1.8;
+    font-weight: 500;
+    font-size: 13px;
+}
+.social-block .social-review {
+    margin-top: 20px;
+}
+.social-review .social-review-block {
+    background: #f7f2f8;
+    padding: 15px 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.social-review .review-text {
+    color: var(--clr-dark-magenta);
+    font-weight: 600;
+    margin-left: 30px;
+    font-size: 13px;
+}
+.star img + img {
+    margin-left: 4px;
+}
+.social-review-block + .social-review-block {
+    margin-top: 15px;
+}
+.social-review .social-review-block:first-child {
+    margin-right: 80px;
+}
+.social-review .social-review-block:nth-child(2) {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.social-review .social-review-block:last-child {
+    margin-left: 80px;
+}
+.social-container .social-author-review {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.social-author-review .social-author-review-block {
+    flex: 0 1 330px;
+    background-color: var(--clr-dark-magenta);
+    border-radius: 8px;
+    padding: 40px 30px;
+    color: #fff;
+}
+.social-author-review-block .social-author-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.social-author-block .social-author-img {
+    border-radius: 50%;
+    width: 40px;
+    margin-right: 20px;
+}
+.social-author-inner-block .social-author-name {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.social-author-inner-block .verified-buyer {
+    color: var(--clr-soft-pink);
+    font-size: 13px;
+}
+.social-author-review-block .social-author-review-text {
+    line-height: 1.8;
+    font-size: 12px;
+}
+.social-author-review .social-author-review-block:first-child {
+    margin-bottom: 30px;
+}
+.social-author-review .social-author-review-block:nth-child(2) {
+    margin: 15px 0;
+}
+.social-author-review .social-author-review-block:last-child {
+    margin-top: 30px;
+}
+
+@media (max-width:1200px) {
+    body {
+        background-size: 100vw, 0;
+    }
+    .social-container {
+        max-width: 90%;
+    }
+    .social-author-review .social-author-review-block,
+    .social-block .social-desc,
+    .social-block .social-review {
+        flex: 1 1 100%;
+    }
+    .social-author-review .social-author-review-block,
+    .social-review .social-review-block {
+        margin: 0 0 15px 0!important;
+    }
+    .social-review .social-review-block {
+        justify-content: center;
+    }
+    .social-container .social-block {
+        margin-bottom: 35px;
+        text-align: center;
+    }
+    .social-container {
+        margin: 80px auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .social-review-block .star,
+    .social-review .review-text {
+        flex-basis: 100%;
+    }
+    .social-review .review-text {
+        margin: 15px 0 0;
+    }
+    .social-desc .title {
+        font-size: 2.8em;
+    }
+    .social-desc p,
+    .social-review .review-text,
+    .social-author-inner-block .social-author-name,
+    .social-author-inner-block .verified-buyer {
+        font-size: 14px;
+    }
+    .social-author-review-block .social-author-review-text {
+        font-size: 16px;
+    }
+    .social-container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}
